@@ -7,6 +7,7 @@ function main() {
    $(".fadeIn").removeClass("invisible");
 
    animateOnObserve(typingAnimation, $("h3, #memories"));
+   animateOnObserve(element => typingAnimation(element, 6), $("#impression"));
    animateOnObserve(progressAnimation, $(".progress-list"));
 
    typingAnimation($("h1")[0]);
@@ -48,7 +49,7 @@ function typingAnimation(element, speed = 3) {
       }
       delay =
          invisibleText[1] === " "
-            ? 500
+            ? 800 - speed * 100
             : 75 + Math.random() * (350 - speed * 50);
       setTimeout(typeCharacter, delay);
    })();
@@ -56,7 +57,7 @@ function typingAnimation(element, speed = 3) {
    function cursorBlink() {
       visibleSpan.classList.toggle("cursor");
       cursor_blink++;
-      if (cursor_blink === 7) return;
+      if (cursor_blink === 9) return;
       setTimeout(() => cursorBlink(), 300);
    }
 }

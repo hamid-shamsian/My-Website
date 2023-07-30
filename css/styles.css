@@ -363,6 +363,11 @@ main h3 {
    right: 0.3em;
 } */
 
+p .cursor::after {
+   position: relative;
+   right: 0;
+}
+
 .flex-2 img {
    width: 90%;
    height: fit-content;
