@@ -1,8 +1,9 @@
-// window.location.hash = "";
-// $("header")[0].scrollIntoView();
 window.onload = main;
 
+if ("scrollRestoration" in history) history.scrollRestoration = "manual"; // This prevents the page from scrolling down to where it was previously.
+
 function main() {
+   $("body").removeClass("no-scroll");
    $(".loading").addClass("none");
    $(".fadeIn").removeClass("invisible");
 
@@ -47,10 +48,7 @@ function typingAnimation(element, speed = 3) {
          cursorBlink();
          return;
       }
-      delay =
-         invisibleText[1] === " "
-            ? 800 - speed * 100
-            : 75 + Math.random() * (350 - speed * 50);
+      delay = invisibleText[1] === " " ? 800 - speed * 100 : 75 + Math.random() * (350 - speed * 50);
       setTimeout(typeCharacter, delay);
    })();
 
@@ -63,8 +61,7 @@ function typingAnimation(element, speed = 3) {
 }
 
 function progressAnimation(element) {
-   for (let progress of $(".progress__fill"))
-      progress.style = `width:${progress.dataset.value}%`;
+   for (let progress of $(".progress__fill")) progress.style = `width:${progress.dataset.value}%`;
 }
 
 function lightBoxInit() {

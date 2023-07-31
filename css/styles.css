@@ -50,6 +50,10 @@ a {
    display: none !important;
 }
 
+.no-scroll {
+   overflow: hidden;
+}
+
 /* Header ///////////////////////////////////////////////////////*/
 
 header {
