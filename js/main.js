@@ -16,6 +16,11 @@ function main() {
       typingAnimation($("h2")[0], 6);
    }, 3500);
 
+   for (let item of $(".projects h5"))
+      item.addEventListener("click", function () {
+         this.parentNode.classList.toggle("collapsed");
+      });
+
    lightBoxInit();
 }
 
