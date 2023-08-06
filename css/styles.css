@@ -492,7 +492,7 @@ h4 {
 
 .collapsed div {
    max-height: 0;
-   right: 50vw;
+   right: 30px;
    opacity: 0;
 }
 
