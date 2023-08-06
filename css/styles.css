@@ -482,25 +482,30 @@ h4 {
 
 .projects div {
    margin-left: 20px;
-   margin-bottom: 50px;
    overflow: hidden;
-   max-height: 200px;
-   transition: all 0.5s;
+   max-height: 500px;
+   transition: all 0.5s ease-out;
+   position: relative;
+   right: 0;
+   opacity: 1;
 }
 
 .collapsed div {
    max-height: 0;
-   margin-left: 0;
-   margin-bottom: 0;
+   right: 50vw;
+   opacity: 0;
 }
 
 .projects a {
+   line-height: 3;
+   white-space: nowrap;
    padding: 5px 30px;
    border-radius: 10px;
-   margin-right: 20px;
+   margin: 0 10px;
    cursor: pointer;
    color: #000;
    background-color: #aaa;
+   box-shadow: 0 0 5px #fff;
 }
 
 .projects a:hover {
@@ -621,7 +626,7 @@ footer {
    box-shadow: 0 0 20px black, inset 0 0 40px 5px black;
    border-radius: 20px;
    background-color: #8e6870;
-   transition: scale 0.5s;
+   transition: transform 0.5s;
 }
 .lightbox * {
    margin: 0;
@@ -657,7 +662,7 @@ figcaption {
       padding: 2rem 2rem 4rem;
    }
    .container:hover {
-      scale: 1.05;
+      transform: scale(1.05);
    }
    .img-container img {
       width: 45%;
